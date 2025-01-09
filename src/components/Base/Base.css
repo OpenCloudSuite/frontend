@@ -1,0 +1,29 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #007BFF, #6a11e0); /* Subtle blue-to-blue gradient */
+  background-size: 200% 200%;
+  animation: wave 20s ease infinite; /* Slower animation for subtle effect */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  width: 94vw; 
+  box-sizing: border-box; 
+  background-color: #fff; 
+  margin: 3vw;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
