@@ -6,7 +6,8 @@
   background-color: #fff; 
   width: 100%; 
   box-sizing: border-box; 
-  overflow: hidden;
+  overflow: visible;
+  z-index: 1000; 
 }
 
 .logo {
@@ -44,41 +45,54 @@
   align-items: center;
 }
 
-.login-btn, .signup-btn {
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.account-btn {
   border: none;
   padding: 8px 16px;
-  margin-left: 10px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
 }
 
-.login-btn {
-  background-color: #fff;
-  color: #333;
-}
-
-.login-btn:hover {
-  background-color: #f0f0f0;
+.account-btn:hover {
+  background-color: #0056b3;
   transform: translateY(-2px);
 }
 
-.signup-btn {
-  background-color: #fff;
-  color: #333;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0; 
+  top: 100%; 
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2000; 
 }
 
-.signup-btn:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.disabled a {
-  color: #bbb;
-  cursor: not-allowed;
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.account-dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .icon {
-  color: black;
+  color: white;
   margin-right: 5px;
 }
